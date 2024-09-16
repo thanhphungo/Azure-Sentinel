@@ -57,7 +57,6 @@
     },
     "resources": [
          {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'AzureActiveDirectory')]",
             "type": "microsoft.aadiam/diagnosticSettings",
             "apiVersion": "2017-04-01",
             "scope": "/",
@@ -105,7 +104,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'Office365')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
@@ -127,7 +125,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'AzureActiveDirectoryIDP')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
@@ -143,7 +140,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'AzureActivity')]",
             "type": "Microsoft.OperationalInsights/workspaces/dataSources",
             "apiVersion": "2020-03-01-preview",
             "location": "[parameters('location')]",
@@ -154,7 +150,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderForCloud')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2020-01-01",
             "location": "[parameters('location')]",
@@ -170,7 +165,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'Microsoft365Defender')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2022-12-01-preview",
             "location": "[parameters('location')]",
@@ -186,7 +180,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'Dynamics365')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2022-12-01-preview",
             "location": "[parameters('location')]",
@@ -202,7 +195,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'IOT')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2022-12-01-preview",
             "location": "[parameters('location')]",
@@ -218,7 +210,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'Office365Project')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2022-12-01-preview",
             "location": "[parameters('location')]",
@@ -234,7 +225,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'OfficeIRM')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2022-12-01-preview",
             "location": "[parameters('location')]",
@@ -250,7 +240,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('dataConnectorsKind'), 'PowerBI')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/dataConnectors",
             "apiVersion": "2022-12-01-preview",
             "location": "[parameters('location')]",
