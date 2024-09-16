@@ -59,7 +59,6 @@
     },
     "resources": [
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'AzureActiveDirectory'),parameters('enableMicrosoftAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('aadipRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -75,7 +74,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'AzureSecurityCenter'),parameters('enableMicrosoftAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('ascRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -91,7 +89,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'AzureAdvancedThreatProtection'),parameters('enableMicrosoftAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('aatpRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -107,7 +104,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'MicrosoftCloudAppSecurity'),parameters('enableMicrosoftAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('mcasRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -123,7 +119,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'Office365'),parameters('enableMicrosoftAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('o365RuleId'))]",
             "apiVersion": "2020-01-01",
@@ -139,7 +134,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'MicrosoftDefenderAdvancedThreatProtection'),parameters('enableMicrosoftAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('mdatpRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -155,7 +149,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'Syslog'),parameters('enableMLAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('mlbaSshRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -168,7 +161,6 @@
             }
         },
         {
-            "condition": "[and(contains(parameters('dataConnectorsKind'), 'SecurityEvents'),parameters('enableMLAlerts'))]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('mlbaRdpRuleId'))]",
             "apiVersion": "2020-01-01",
@@ -181,7 +173,6 @@
             }
         },
         {
-            "condition": "[parameters('enableFusionAlert')]",
             "type": "Microsoft.OperationalInsights/workspaces/providers/alertRules",
             "name": "[concat(parameters('workspaceName'),'/Microsoft.SecurityInsights/',variables('fusionRuleId'))]",
             "apiVersion": "2020-01-01",
